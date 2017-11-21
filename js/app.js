@@ -51,6 +51,9 @@ function newTask (event) {
   button.value = 'agregar';
   //4° paso asignar sus padres a los 3 elementos creados
   event.target.parentElement.appendChild(form);
+  button.autofocus = true|false;
+  textArea.autofocus = true|false;
+  
 }
 //-----terminamos la version 3 de trello
 
