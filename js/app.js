@@ -31,8 +31,28 @@ function createList(event) {
 
     /* link.addEventListener("click", createCard); */
     titleElement.parentElement.appendChild(link);
+    //---añadimos en clase
+    //1° agregamos el evento
+    link.addEventListener('click', newTask);
   }
 }
+//-------codigo agregado por mi
+//2° paso 2: creamos los 3 elementos que contendra el texto y mostrara al textarea
+function newTask (event) {
+  event.target.classList.add('display-none');
+  var form = document.createElement('form');
+  var textArea = document.createElement('textarea');
+  var button = document.createElement('input');
+//3° paso : Añadir nodos al DOM
+// asignar sus padres a los 3 elementos creados
+  form.appendChild(textArea);
+  form.appendChild(button);
+  button.setAttribute('type', 'submit');
+  button.value = 'agregar';
+  //4° paso asignar sus padres a los 3 elementos creados
+  event.target.parentElement.appendChild(form);
+}
+//-----terminamos la version 3 de trello
 
 function begin() {
   addList.addEventListener('click', newList);
