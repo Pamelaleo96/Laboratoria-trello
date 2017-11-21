@@ -32,7 +32,7 @@ function createList(event) {
     /* link.addEventListener("click", createCard); */
     titleElement.parentElement.appendChild(link);
     //---añadimos en clase
-    //1° agregamos el evento
+    //1° agregamos el evento para ocultar (añadir lista) que se encuentra en el elemento a y poder mostrar el textarea
     link.addEventListener('click', newTask);
   }
 }
